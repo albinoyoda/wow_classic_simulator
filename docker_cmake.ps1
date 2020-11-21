@@ -1,4 +1,3 @@
-Remove-Item ./interface/emscripten -Recurse -ErrorAction Ignore
 mkdir -p interface/emscripten
 docker run --rm -v ${PWD}:/src trzeci/emscripten /bin/bash -c "cd interface/emscripten &&  emcmake cmake ../.. -DEMSCRIPTEN=True && emmake make"
 
